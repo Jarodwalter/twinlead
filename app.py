@@ -12,11 +12,10 @@ st.set_page_config(
 )
 
 # ─── CUSTOM CSS ────────────────────────────────────────────────────────────────
-st.markdown("""
+st.html("""
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 
-/* ── BASE ── */
 html, body, [class*="css"] {
     font-family: 'DM Sans', sans-serif !important;
     background-color: #0D0D0D !important;
@@ -24,17 +23,14 @@ html, body, [class*="css"] {
 }
 .stApp { background-color: #0D0D0D; }
 
-/* ── HIDE STREAMLIT CHROME ── */
 #MainMenu, footer, header, .stDeployButton { visibility: hidden; }
 [data-testid="stToolbar"] { display: none; }
 
-/* ── MAIN CONTAINER ── */
 .block-container {
     max-width: 680px !important;
     padding: 3rem 2rem !important;
 }
 
-/* ── TITLE ── */
 h1 {
     font-size: 1.6rem !important;
     font-weight: 700 !important;
@@ -43,7 +39,6 @@ h1 {
     margin-bottom: 0 !important;
 }
 
-/* ── SUBTITLES ── */
 h2, h3 {
     font-size: 0.85rem !important;
     font-weight: 600 !important;
@@ -54,16 +49,13 @@ h2, h3 {
     margin-bottom: 0.5rem !important;
 }
 
-/* ── CAPTION ── */
 .stCaption p, [data-testid="stCaptionContainer"] p {
     color: #555555 !important;
     font-size: 0.82rem !important;
 }
 
-/* ── DIVIDER ── */
 hr { border-color: #1C1C1C !important; margin: 1.5rem 0 !important; }
 
-/* ── INPUTS ── */
 input[type="text"], input[type="number"], textarea {
     background-color: #141414 !important;
     border: 1px solid #242424 !important;
@@ -82,7 +74,6 @@ label, [data-testid="stWidgetLabel"] p {
     font-weight: 500 !important;
 }
 
-/* ── PRIMARY BUTTON ── */
 .stButton > button[kind="primary"] {
     background: #4F6EF7 !important;
     color: #FFFFFF !important;
@@ -101,7 +92,6 @@ label, [data-testid="stWidgetLabel"] p {
     box-shadow: 0 4px 24px rgba(79,110,247,0.3) !important;
 }
 
-/* ── SECONDARY BUTTON ── */
 .stButton > button[kind="secondary"] {
     background: transparent !important;
     color: #555555 !important;
@@ -117,7 +107,6 @@ label, [data-testid="stWidgetLabel"] p {
     border-color: #3A3A3A !important;
 }
 
-/* ── LINK BUTTON ── */
 [data-testid="stLinkButton"] a {
     background: #4F6EF7 !important;
     color: #FFFFFF !important;
@@ -126,11 +115,8 @@ label, [data-testid="stWidgetLabel"] p {
     font-family: 'DM Sans', sans-serif !important;
     text-decoration: none !important;
 }
-[data-testid="stLinkButton"] a:hover {
-    background: #3D5AE0 !important;
-}
+[data-testid="stLinkButton"] a:hover { background: #3D5AE0 !important; }
 
-/* ── PROGRESS BAR ── */
 .stProgress > div > div > div {
     background: linear-gradient(90deg, #4F6EF7, #818CF8) !important;
     border-radius: 4px !important;
@@ -140,14 +126,12 @@ label, [data-testid="stWidgetLabel"] p {
     border-radius: 4px !important;
 }
 
-/* ── DATAFRAME ── */
 [data-testid="stDataFrame"] {
     border: 1px solid #1C1C1C !important;
     border-radius: 10px !important;
     overflow: hidden !important;
 }
 
-/* ── ALERT ── */
 [data-testid="stAlert"] {
     background: #141414 !important;
     border: 1px solid #242424 !important;
@@ -156,7 +140,6 @@ label, [data-testid="stWidgetLabel"] p {
     font-size: 0.85rem !important;
 }
 
-/* ── DOWNLOAD BUTTON ── */
 [data-testid="stDownloadButton"] button {
     background: transparent !important;
     border: 1px solid #242424 !important;
@@ -172,7 +155,7 @@ label, [data-testid="stWidgetLabel"] p {
 }
 
 </style>
-""", unsafe_allow_html=True)
+""")
 
 
 # ─── SESSION STATE ──────────────────────────────────────────────────────────────
